@@ -1,0 +1,23 @@
+{
+  "name": "enjoy-thread-jari",
+  "version": "1.0.0",
+  "description": "Enjoy Thread And Jari",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maulikpipaliya/mern-ecommerce.git"
+  },
+  "author": "Maulik Pipaliya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maulikpipaliya/mern-ecommerce/issues"
+  },
+  "homepage": "https://github.com/maulikpipaliya/mern-ecommerce#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
