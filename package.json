@@ -1,10 +1,14 @@
 {
   "name": "enjoy-thread-jari",
+  "type" : "module",
   "version": "1.0.0",
   "description": "Enjoy Thread And Jari",
   "main": "server.js",
   "scripts": {
-    "start": "node backend/server"
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -17,7 +21,11 @@
   },
   "homepage": "https://github.com/maulikpipaliya/mern-ecommerce#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^6.1.0",
     "nodemon": "^2.0.7"
   }
 }

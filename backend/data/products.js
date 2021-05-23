@@ -2,7 +2,7 @@ const products = [
   {
     _id: 1,
     name: "Recco Thread",
-    image: "/images/img (1).jpg",
+    image: "/images/img1.jpg",
     category: "Embroidery Thread",
     description: "Recco Thread",
     price: 128.17,
@@ -12,7 +12,7 @@ const products = [
   {
     _id: 2,
     name: "Lichi Thread",
-    image: "/images/img (2).jpg",
+    image: "/images/img2.jpg",
     category: "Embroidery Thread",
     description: "Lichi Thread",
     price: 69.85,
@@ -22,7 +22,7 @@ const products = [
   {
     _id: 3,
     name: "Polyester Thread",
-    image: "/images/img (3).jpg",
+    image: "/images/img3.jpg",
     category: "Embroidery Thread",
     description: "Polyester Thread",
     price: 189.97,
@@ -32,7 +32,7 @@ const products = [
   {
     _id: 4,
     name: "Acrylic Thread",
-    image: "/images/img (4).jpg",
+    image: "/images/img4.jpg",
     category: "Embroidery Thread",
     description: "Acrylic Thread",
     price: 156.75,
@@ -42,7 +42,7 @@ const products = [
   {
     _id: 5,
     name: "German Thread",
-    image: "/images/img (5).jpg",
+    image: "/images/img5.jpg",
     category: "Embroidery Thread",
     description: "German Thread",
     price: 78.2,
@@ -52,7 +52,7 @@ const products = [
   {
     _id: 6,
     name: "Kasab Jari",
-    image: "/images/img (6).jpg",
+    image: "/images/img6.jpg",
     category: "Embroidery Jari",
     description: "Kasab Jari",
     price: 498.72,
@@ -61,4 +61,4 @@ const products = [
   }
 ];
 
-module.exports = products 
+export default products 
