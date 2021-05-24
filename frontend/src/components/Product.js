@@ -5,7 +5,7 @@ import { Card } from "react-bootstrap";
 const Product = ({ product }) => {
   return (
     <Card className='my-3 py-3 rounded'>
-      <Link to={`/product/${product._id}`}>
+      <Link to={`/product/${product.slug}`}>
         <Card.Img variant='top' src={product.image} />
       </Link> 
       <Card.Body>
@@ -15,7 +15,7 @@ const Product = ({ product }) => {
           </Card.Title>
         </Link>
         
-        <Card.Text as='h3'> ₹ {product.price}</Card.Text>
+        <Card.Text as='h3'> ₹ {product.price.base}</Card.Text>
       </Card.Body>
     </Card>
   );
