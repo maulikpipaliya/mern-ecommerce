@@ -1,51 +1,37 @@
 import axios from "axios";
-import {
-  CART_LIST_REQUEST,
-  CART_LIST_SUCCESS,
-    CART_LIST_FAIL,
-    CART_ADD_ITEM,
-    CART_REMOVE_ITEM,
-} from "../constants/cartConstants";
+import { CART_ADD_ITEM, CART_REMOVE_ITEM } from "../constants/cartConstants";
 
-export const listCARTs = () => async (dispatch) => {
-  try {
-    dispatch({
-      type: CART_LIST_REQUEST,
-    });
+export const addToCart = (slugid, qty) => async (dispatch, getState) => {
+    try {
+        const { data } = await axios.get(`/api/products/${slugid}`);
+        console.log("🚀 ~ file: cartActions.js ~ line 7 ~ addToCart ~ data", data)
+      
+        dispatch({
+            type: CART_ADD_ITEM,
+            payload: {
+                product: data._id,
+                name: data.name,
+                image: data.image,
+                price: data.price.base,
+                countInStock: data.countInStock,
+                qty,
+            },
+        });
 
-    const { data } = await axios.get("/api/CARTs");
-    dispatch({
-      type: CART_LIST_SUCCESS,
-      payload: data,
-    });
-  } catch (error) {
-    dispatch({
-      type: CART_LIST_FAIL,
-      payload:
-        error.response && error.response.data.message
-          ? error.response.data.message
-          : error.message,
-    });
-  }
+        localStorage.setItem(
+            "cartItem",
+            JSON.stringify(getState().cart.cartItems)
+        );
+    } catch (error) {}
 };
 
-export const listCARTDetails = (slugid) => async (dispatch) => {
-  try {
-    dispatch({ type: CART_DETAILS_REQUEST })
+export const removeFromCart = (id) => async (dispatch, getState) => {
+    try {
+        dispatch({
+            type: CART_REMOVE_ITEM,
+            payload: id
+        })
 
-    const { data } = await axios.get(`/api/CARTs/${slugid}`)
-    
-    dispatch({
-      type: CART_DETAILS_SUCCESS,
-      payload: data,
-    })
-  } catch (error) {
-    dispatch({
-      type: CART_DETAILS_FAIL,
-      payload:
-        error.response && error.response.data.message
-          ? error.response.data.message
-          : error.message,
-    })
-  }
-}
+        localStorage.setItems('cartItems', JSON.stringify(getState().cart.cartItems))
+    } catch (error) {}
+};

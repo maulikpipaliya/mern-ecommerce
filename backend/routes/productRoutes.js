@@ -20,7 +20,7 @@ router.get(
 );
 
 // desc   : Fetch specific product
-// route  : GET /api/products/:slug
+// route  : GET /api/products/:slugid
 // access : public
 router.get(
   "/:slugid",
