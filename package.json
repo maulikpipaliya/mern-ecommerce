@@ -2,7 +2,7 @@
   "name": "enjoy-thread-jari",
   "type": "module",
   "version": "1.0.0",
-  "description": "Enjoy Thread And Jari",
+  "description": "Enjoy Enterprise",
   "main": "server.js",
   "scripts": {
     "start": "node backend/server",
