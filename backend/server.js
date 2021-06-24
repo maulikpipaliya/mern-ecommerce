@@ -23,9 +23,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/api/products", productRoutes);
 app.use("/api/users", userRoutes);
 
-//Middlewares
-app.use(notFound);
-app.use(errorHandler);
 const PORT = process.env.PORT || 5000;
 
 app.listen(5000, () => {
@@ -34,3 +31,7 @@ app.listen(5000, () => {
             .green
     );
 });
+
+//Middlewares
+app.use(notFound);
+app.use(errorHandler);
