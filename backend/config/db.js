@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import color from 'colors';
 
 const connectDB = async () => {
     try {
@@ -14,6 +15,5 @@ const connectDB = async () => {
         process.exit(1);
     }
 }
-
 
 export default connectDB
