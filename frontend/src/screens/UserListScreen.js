@@ -25,7 +25,7 @@ const UserListScreen = ({ history }) => {
             history.push("/login");
         }
         //eslint-disable-next-line
-    }, [dispatch, history, successDelete]);
+    }, [dispatch, history, successDelete, userInfo]);
 
     const deleteHandler = (id) => {
         if (window.confirm("Are you sure")) {
@@ -76,7 +76,7 @@ const UserListScreen = ({ history }) => {
                                 </td>
                                 <td>
                                     <LinkContainer
-                                        to={`/user/${user._id}/edit`}
+                                        to={`/admin/user/${user._id}/edit`}
                                     >
                                         <Button
                                             variant='light'
