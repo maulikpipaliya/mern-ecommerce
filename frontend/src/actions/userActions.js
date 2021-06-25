@@ -16,6 +16,8 @@ import {
     EMPTY_USER_DETAILS,
 } from "../constants/userConstants";
 
+import { EMPTY_CART } from "../constants/cartConstants";
+
 export const login = (email, password) => async (dispatch) => {
     try {
         dispatch({
@@ -53,9 +55,15 @@ export const login = (email, password) => async (dispatch) => {
 
 export const logout = () => (dispatch, getState) => {
     localStorage.removeItem("userInfo");
+    localStorage.removeItem("cartItem");
+    localStorage.removeItem("shippingAddress");
 
+
+    dispatch({ type: EMPTY_CART });
     dispatch({ type: EMPTY_USER_DETAILS });
     dispatch({ type: USER_LOGOUT });
+
+    
 };
 
 export const register =

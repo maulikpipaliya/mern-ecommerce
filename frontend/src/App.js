@@ -8,6 +8,10 @@ import CartScreen from "./screens/CartScreen";
 import LoginScreen from "./screens/LoginScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import RegisterScreen from "./screens/RegisterScreen";
+import ShippingScreen from "./screens/ShippingScreen";
+
+import PlaceOrderScreen from "./screens/PlaceOrderScreen";
+import OrderScreen from "./screens/OrderScreen";
 
 function App() {
     return (
@@ -21,6 +25,9 @@ function App() {
                     {/* question mark makes it optional */}
                     <Route path='/cart/:slugid?' component={CartScreen} />
                     <Route path='/profile' component={ProfileScreen} />
+                    <Route path='/shipping' component={ShippingScreen} />
+                    <Route path='/placeorder' component={PlaceOrderScreen} />
+                    <Route path='/order/:id' component={OrderScreen} />
                     <Route path='/' component={HomeScreen} exact />
                 </Container>
             </main>
