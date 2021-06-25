@@ -83,7 +83,7 @@ const RegisterScreen = ({ location, history }) => {
                 </Form.Group>
 
                 <Form.Group controlId='contact'>
-                    <Form.Label>State</Form.Label>
+                    <Form.Label>ContactNumber</Form.Label>
                     <Form.Control
                         type='number'
                         placeholder='Enter contact Number'
@@ -93,7 +93,7 @@ const RegisterScreen = ({ location, history }) => {
                 </Form.Group>
 
                 <Form.Group controlId='pincode'>
-                    <Form.Label>State</Form.Label>
+                    <Form.Label>Pincode</Form.Label>
                     <Form.Control
                         placeholder='Enter pincode'
                         value={pincode}
@@ -102,7 +102,7 @@ const RegisterScreen = ({ location, history }) => {
                 </Form.Group>
 
                 <Form.Group controlId='city'>
-                    <Form.Label>State</Form.Label>
+                    <Form.Label>City</Form.Label>
                     <Form.Control
                         placeholder='Enter city'
                         value={city}
