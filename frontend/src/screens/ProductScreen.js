@@ -67,7 +67,7 @@ const ProductScreen = ({ history, match }) => {
                                         <Col>Price:</Col>
                                         <Col>
                                             <strong>
-                                                ${product.price.base}
+                                            ₹{product.price.base}
                                             </strong>
                                         </Col>
                                     </Row>

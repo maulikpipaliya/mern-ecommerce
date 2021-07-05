@@ -1,3 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rozha+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&family=Rozha+One&display=swap');
+*{
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Playfair Display', serif;
+}
+
+:root{
+  --ee-brown: #B67156;
+}
+
 main {
     min-height: 80vh;
   }
@@ -54,3 +67,21 @@ main {
       font-size: 2.5vw;
     }
   }
+
+
+  .ee-logo{
+    width:250px;
+    height: 140px;
+  }
+
+
+.ee-brown{
+  /* background-color: var(--ee-brown); */
+  background-color:#352D27;
+}
+
+.nav-link{
+  
+  font-family: 'Rozha One', serif;
+  color: var(--ee-brown) !important;
+}

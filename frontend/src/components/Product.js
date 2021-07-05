@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 
 const Product = ({ product }) => {
   return (
-    <Card className='my-3 py-3 rounded'>
+    <Card className='my-3 py-3 rounded shadow'>
       <Link to={`/product/${product.slug}`}>
         <Card.Img variant='top' src={product.image} />
       </Link> 

@@ -3,11 +3,11 @@ import ReactDOM from "react-dom";
 import { Provider } from 'react-redux';
 import store from './store'
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./bootstrap.min.css";
-import "./index.css";
+
+import "bootstrap/dist/css/bootstrap.min.css"; // main
+import "./index.css"; //custom
+// import "./bootstrap.min.css"; // lux
 
 
 ReactDOM.render(
@@ -17,5 +17,3 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-
-reportWebVitals();

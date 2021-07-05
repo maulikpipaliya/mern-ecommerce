@@ -16,14 +16,21 @@ const Header = ({ history }) => {
 
     return (
         <header>
-            <Navbar collapseOnSelect expand='lg' bg='dark' variant='dark'>
+            <Navbar collapseOnSelect expand='lg'>
                 <Container>
                     <LinkContainer to='/'>
-                        <Navbar.Brand>Enjoy Enterprise</Navbar.Brand>
+                        <Navbar.Brand href='#home'>
+                            <img
+                                alt=''
+                                src='site-content/png/logo-side.png'
+                                className='d-inline-block align-top ee-logo'
+                            />{" "}
+                        </Navbar.Brand>
                     </LinkContainer>
+
                     <Navbar.Toggle aria-controls='responsive-navbar-nav' />
                     <Navbar.Collapse id='responsive-navbar-nav'>
-                        <Nav className='mr-auto'>
+                        <Nav className='m-auto'>
                             <Nav.Link href='#features'>Contact</Nav.Link>
                             <Nav.Link href='#pricing'>Visit Us</Nav.Link>
                             <NavDropdown
@@ -46,8 +53,7 @@ const Header = ({ history }) => {
                         <Nav>
                             <LinkContainer to='/cart'>
                                 <Nav.Link href='#carts'>
-                                    {/* <i className="fa fa-shopping-cart"></i> */}
-                                    Cart
+                                    <i className='fa fa-shopping-cart'></i>
                                 </Nav.Link>
                             </LinkContainer>
                             {userInfo ? (
@@ -95,6 +101,9 @@ const Header = ({ history }) => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+         
+
+      
         </header>
     );
 };
